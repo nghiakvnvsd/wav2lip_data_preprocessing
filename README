@@ -1,4 +1,4 @@
-# Parallel Wav2Lip Data Preprocessing </br>
+# Parallel Wav2Lip Data Preprocessing 
 
 ### 1. Run convert video to standard 25 FPS
 # dataset is located /your-folder-dataset/full_voice
@@ -6,8 +6,8 @@
 python3 1_convert_25fps.py </your-folder-dataset> <presenter_name> <n_processes>
 ```
 it will automatically create new folder name ***your-folder-dataset/full_voice_25fps***
-</br>
-the  folder structure: </br>
+
+the  folder structure: 
 ```
 your-folder-dataset
 |---full_voice
@@ -19,16 +19,16 @@ your-folder-dataset
 |       video2.mp4
 |       ..........
 ```
-</br>
 
-### 2. Run to crop video</br>
+
+### 2. Run to crop video
 
 ```bash
 python3 2_crop_video.py </your-folder-dataset> <presenter_name> <n_processes>
 ```
-it will automatically create new folder name ***your-folder-dataset/videos_crop*** </br>
+it will automatically create new folder name ***your-folder-dataset/videos_crop*** 
 
-the  folder structure: </br>
+the  folder structure: 
 ```
 your-folder-dataset
 |---full_voice
@@ -38,16 +38,16 @@ your-folder-dataset
 |       video2.mp4
 |       ..........
 ```
-</br>
 
-### 3. Run to split each video into 10s videos</br>
+
+### 3. Run to split each video into 10s videos
 
 ```bash
 python3 3_segment.py </your-folder-dataset> <presenter_name> <n_processes>
 ```
-it will automatically create new folder name ***your-folder-dataset/videos_segment*** </br> and ***your-folder-dataset/audios_segment*** </br>
+it will automatically create new folder name ***your-folder-dataset/videos_segment***  and ***your-folder-dataset/audios_segment*** 
 
-the  folder structure: </br>
+the  folder structure: 
 ```
 your-folder-dataset
 |---full_voice
@@ -74,16 +74,16 @@ your-folder-dataset
 |             .........
 |---------.............
 ```
-</br>
 
-### 4. Run face detection </br>
+
+### 4. Run face detection 
 
 ```bash
 python3 4_detection.py </your-folder-dataset> <presenter_name> <n_processes>
 ```
-it will automatically create new folder name ***your-folder-dataset/output*** </br>
+it will automatically create new folder name ***your-folder-dataset/output*** 
 
-the  folder structure: </br>
+the  folder structure: 
 ```
 your-folder-dataset
 |---full_voice
@@ -122,16 +122,16 @@ your-folder-dataset
 |-------------...........
 |---------.......
 ```
-</br>
 
-### 5. Create filelist structure for wav2lip training </br>
+
+### 5. Create filelist structure for wav2lip training 
 
 ```bash
 python3 5_create_filelist.py
 ```
-it will automatically create new folder name ***your-folder-dataset/filelist*** </br>
+it will automatically create new folder name ***your-folder-dataset/filelist*** 
 
-the  folder structure: </br>
+the  folder structure: 
 ```
 your-folder-dataset
 |---full_voice
@@ -150,9 +150,9 @@ your-folder-dataset
 ```bash
 python3 6_au_sync.py
 ```
-it will automatically create new folder name ***your-folder-dataset/filelist/temp*** </br>
+it will automatically create new folder name ***your-folder-dataset/filelist/temp*** 
 
-the  folder structure: </br>
+the  folder structure: 
 ```
 your-folder-dataset
 |---full_voice
@@ -208,7 +208,7 @@ your-folder-dataset
 python3 7_to_mel.py
 ```
 
-the  folder structure: </br>
+the  folder structure: 
 ```
 your-folder-dataset
 |---full_voice
