@@ -1,9 +1,9 @@
 # Parallel Wav2Lip Data Preprocessing 
 
 ### 1. Run convert video to standard 25 FPS
-# dataset is located /your-folder-dataset/full_voice
+assume dataset is located "your-folder-dataset"
 ```bash
-python3 1_convert_25fps.py </your-folder-dataset> <presenter_name> <n_processes>
+python3 1_convert_25fps.py <your-folder-dataset> <presenter_name> <n_processes>
 ```
 it will automatically create new folder name ***your-folder-dataset/full_voice_25fps***
 
@@ -24,7 +24,7 @@ your-folder-dataset
 ### 2. Run to crop video
 
 ```bash
-python3 2_crop_video.py </your-folder-dataset> <presenter_name> <n_processes>
+python3 2_crop_video.py <your-folder-dataset> <presenter_name> <n_processes>
 ```
 it will automatically create new folder name ***your-folder-dataset/videos_crop*** 
 
@@ -43,7 +43,7 @@ your-folder-dataset
 ### 3. Run to split each video into 10s videos
 
 ```bash
-python3 3_segment.py </your-folder-dataset> <presenter_name> <n_processes>
+python3 3_segment.py <your-folder-dataset> <presenter_name> <n_processes>
 ```
 it will automatically create new folder name ***your-folder-dataset/videos_segment***  and ***your-folder-dataset/audios_segment*** 
 
@@ -79,7 +79,7 @@ your-folder-dataset
 ### 4. Run face detection 
 
 ```bash
-python3 4_detection.py </your-folder-dataset> <presenter_name> <n_processes>
+python3 4_detection.py <your-folder-dataset> <presenter_name> <n_processes>
 ```
 it will automatically create new folder name ***your-folder-dataset/output*** 
 
@@ -127,7 +127,7 @@ your-folder-dataset
 ### 5. Create filelist structure for wav2lip training 
 
 ```bash
-python3 5_create_filelist.py
+python3 5_create_filelist.py <your-folder-dataset>
 ```
 it will automatically create new folder name ***your-folder-dataset/filelist*** 
 
@@ -148,7 +148,7 @@ your-folder-dataset
 ### 6. Correct audio with video (audio lenght less than video length after converting to 25fps)
 
 ```bash
-python3 6_au_sync.py
+python3 6_au_sync.py <your-folder-dataset>
 ```
 it will automatically create new folder name ***your-folder-dataset/filelist/temp*** 
 
@@ -205,7 +205,7 @@ your-folder-dataset
 ### 7. Convert audio to mel spectrogram
 
 ```bash
-python3 7_to_mel.py
+python3 7_to_mel.py <your-folder-dataset>
 ```
 
 the  folder structure: 
